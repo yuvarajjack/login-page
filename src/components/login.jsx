@@ -25,7 +25,7 @@ function Login() {
         }
     
         if ((emailInput === hardcodedCred.email) && (passwordInput === hardcodedCred.password)) {
-            document.write("<h1>Login Was Successfull</h1>")
+            document.write("<h1>Login Was Successful</h1>")
 
                                                
         }else if((emailInput === hardcodedCred.email && (passwordInput !== hardcodedCred.password))) {
@@ -45,29 +45,30 @@ function Login() {
             <form className="form" autoComplete="off" onSubmit={handleLoginSubmit}>
             <div className="display">
                 <div className="form-group">
-                    <label htmlFor="Username">User Name 
+                    
+                    <label htmlFor="Username">User Name </label> <br/>
                     <input
                     type="email"
                     required
-                    className="form-control"
+                    className="input"
                     id="exampleInputEmail1"
                     aria-describedby="emailHelp"
-                    placeholder="Enter email"
+                    placeholder="Enter Email"
                     value={emailInput}                    
                     onChange={handleEmailChange}
-                    title="This field should not be left blank."
 
                     />
-                    </label>
+                    
                     
                 </div>
                 <div className="form-group">
-                    <label htmlFor="Password">Password
+                    <label htmlFor="Password">Password </label>
+                    <br/>
                     <input
                     type="password"
                     required
                     autoComplete="new-password"
-                    className="form-control"
+                    className="input"
                     id="exampleInputPassword1"
                     placeholder="Enter Password"
                     minLength="8"
@@ -75,14 +76,14 @@ function Login() {
                     onChange={handlePasswordChange}
 
                     />
-                    
-                    </label>
-                    
+                                       
                 </div>
-                
-                <button type="submit" className="button  btn-block">
+                <br/>
+                <div className="form-group">
+                <button type="submit" className="button">
                     Sign In
                 </button>
+                </div>
                 </div>                                
                 <br/>
                 <a className="link" href="#" id="forgot">Forgot Password?</a>          
